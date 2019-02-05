@@ -8,24 +8,24 @@ require_once( get_stylesheet_directory() . '/includes/acf/301nc-acf-class.php');
  * Child Theme Nav Menus
  */
 
- if ( class_exists( '301NC_Nav_Menus' ) ) {
-   new 301NC_Nav_Menus();
+ if ( class_exists( 'NC_Nav_Menus' ) ) {
+   new NC_Nav_Menus();
  }
 
 /**
  * Child Theme Widgets
  */
 
-if ( class_exists( '301NC_Widgets' ) ) {
-  new 301NC_Widgets();
+if ( class_exists( 'NC_Widgets' ) ) {
+  new NC_Widgets();
 }
 
 /**
  * Child Theme ACF
  */
 
- if ( class_exists( '301NC_ACF' ) ) {
-   new 301NC_ACF();
+ if ( class_exists( 'NC_ACF' ) ) {
+   new NC_ACF();
  }
 
 

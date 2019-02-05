@@ -2,7 +2,7 @@
 
 require_once( get_template_directory() . '/includes/acf/torque-acf-search-class.php' );
 
-class 301NC_ACF {
+class NC_ACF {
 
   public function __construct() {
     add_action('admin_init', array( $this, 'acf_admin_init'), 99);

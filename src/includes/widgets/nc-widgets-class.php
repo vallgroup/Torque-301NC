@@ -2,7 +2,7 @@
 
 require_once( get_template_directory() . '/includes/widgets/torque-widgets-class.php' );
 
-class 301NC_Widgets {
+class NC_Widgets {
 
   public function __construct() {
     add_filter( Torque_Widgets::$sidebars_filter_handle, array( $this, 'modify_parent_sidebars' ) );
