@@ -1,7 +1,9 @@
-@import 'partials/variables';
+@import "partials/variables";
 
-@import 'grid';
+@import "grid";
 
-@import 'typography/typography';
+@import "typography/typography";
 
-@import 'parts/shared/header-templates/header-style-1';
+@import "parts/shared/header-templates/header-style-1";
+
+@import "parts/templates/titles/title-home";

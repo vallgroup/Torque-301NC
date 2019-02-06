@@ -1,0 +1,21 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  max-height: 300px;
+
+  background-size: cover;
+  text-align: left;
+
+  @include respond-to(tablet) {
+    max-height: none;
+  }
+
+  .hero-logo {
+    position: absolute;
+    left: $bodyPadding;
+    bottom: 55px;
+    width: 75%;
+    max-width: 480px;
+    height: auto;
+  }
+}
