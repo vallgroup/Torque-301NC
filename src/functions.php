@@ -29,7 +29,17 @@ if ( class_exists( 'NC_Widgets' ) ) {
  }
 
 
+/**
+ * Map plugin settings
+ */
 
+if ( class_exists( 'Torque_Map_CPT' ) ) {
+  add_filter( Torque_Map_CPT::$POIS_ALLOWED_FILTER , function() { return 4; });
+}
+if ( class_exists( 'Torque_Map_Controller' ) ) {
+  add_filter( Torque_Map_Controller::$DISPLAY_POIS_FILTER , function() { return true; });
+  add_filter( Torque_Map_Controller::$POIS_LOCATION , function() { return 'bottom'; });
+}
 
 /**
  * Admin settings
