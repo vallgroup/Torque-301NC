@@ -8,6 +8,8 @@ header#header-style-1 {
   background-color: rgba($pale-mauve, 0.85);
 
   .torque-header-content-wrapper {
+    display: flex;
+    align-items: center;
     padding: 0;
 
     .torque-header-logo-wrapper {
@@ -30,10 +32,18 @@ header#header-style-1 {
         display: none;
       }
 
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
       padding-top: 15px;
+
+      .torque-menu-items-inline {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        .torque-menu-item-wrapper {
+          margin: 0 15px;
+        }
+      }
     }
   }
 
