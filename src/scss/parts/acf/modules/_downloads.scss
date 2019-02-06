@@ -1,0 +1,53 @@
+.downloads-section {
+  .header-wrapper {
+    margin-right: 33%;
+    border: {
+      right: $border;
+      bottom: $border;
+    }
+    padding: 100px 65px 30px;
+    width: 66%;
+    box-sizing: border-box;
+
+    text-align: left;
+  }
+
+  .downloads-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+
+    .download {
+      margin-top: -$borderWidth;
+      border: {
+        top: $border;
+        right: $border;
+        bottom: $border;
+      }
+      padding: 150px 45px 45px;
+      width: 33%;
+      box-sizing: border-box;
+
+      .image-wrapper {
+        position: relative;
+        margin-bottom: 10px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 72%;
+
+        .image {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-size: cover;
+          background-position: center;
+        }
+      }
+
+      button {
+        margin: 0 auto;
+      }
+    }
+  }
+}
