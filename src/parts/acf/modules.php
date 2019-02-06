@@ -53,9 +53,6 @@ if ( have_rows( $modules ) ):
 
         break;
 
-
-      /*
-
       case 'downloads_section':
 
         $anchor = get_sub_field('anchor');
@@ -63,8 +60,6 @@ if ( have_rows( $modules ) ):
         include locate_template('/parts/acf/modules/downloads.php');
 
         break;
-
-      */
     }
 
   endwhile;
