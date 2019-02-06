@@ -1,25 +1,35 @@
 footer {
-  margin-top: 25px;
-  padding: 50px 12vw 130px;
-  box-sizing: border-box;
+  .footer-main {
+    margin-top: 25px;
+    padding: 50px 12vw 130px;
+    box-sizing: border-box;
 
-  background-color: $pale-mauve;
+    background-color: $pale-mauve;
 
-  h2 {
-    margin: 0 0 60px;
+    h2 {
+      margin: 0 0 60px;
+    }
+
+    .footer-contacts {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .footer-contact {
+        @extend %footer;
+
+        margin: 0 20px;
+
+        text-align: center;
+      }
+    }
   }
 
-  .footer-contacts {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-
-    .footer-contact {
-      @extend %footer;
-
-      margin: 0 20px;
-
-      text-align: center;
+  .footer-lower {
+    margin-top: 25px;
+    border: {
+      top: $border;
     }
+    height: 100px;
   }
 }
