@@ -39,6 +39,7 @@ if ( class_exists( 'Torque_Map_CPT' ) ) {
 if ( class_exists( 'Torque_Map_Controller' ) ) {
   add_filter( Torque_Map_Controller::$DISPLAY_POIS_FILTER , function() { return true; });
   add_filter( Torque_Map_Controller::$POIS_LOCATION , function() { return 'bottom'; });
+  add_filter( Torque_Map_Controller::$API_KEY_FILTER , function() { return get_field( 'api_key', 'options' ); });
 }
 
 /**

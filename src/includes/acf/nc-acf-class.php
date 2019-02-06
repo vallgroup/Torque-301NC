@@ -274,6 +274,49 @@ class NC_ACF {
       	'description' => '',
       ));
 
+      acf_add_local_field_group(array(
+      	'key' => 'group_5c5b3e88e92b3',
+      	'title' => 'Map Settings',
+      	'fields' => array(
+      		array(
+      			'key' => 'field_5c5b3e8e6c02c',
+      			'label' => 'API Key',
+      			'name' => 'api_key',
+      			'type' => 'text',
+      			'instructions' => '',
+      			'required' => 0,
+      			'conditional_logic' => 0,
+      			'wrapper' => array(
+      				'width' => '',
+      				'class' => '',
+      				'id' => '',
+      			),
+      			'default_value' => '',
+      			'placeholder' => '',
+      			'prepend' => '',
+      			'append' => '',
+      			'maxlength' => '',
+      		),
+      	),
+      	'location' => array(
+      		array(
+      			array(
+      				'param' => 'options_page',
+      				'operator' => '==',
+      				'value' => 'acf-options',
+      			),
+      		),
+      	),
+      	'menu_order' => 0,
+      	'position' => 'normal',
+      	'style' => 'default',
+      	'label_placement' => 'top',
+      	'instruction_placement' => 'label',
+      	'hide_on_screen' => '',
+      	'active' => 1,
+      	'description' => '',
+      ));
+
       endif;
   }
 }
