@@ -43,17 +43,20 @@ if ( have_rows( $modules ) ):
 
         break;
 
-
-      /*
-      case 'downloads_section':
+      case 'map':
 
         $anchor = get_sub_field('anchor');
+        $description = get_sub_field('description');
+        $map_shortcode = get_sub_field('map_shortcode');
 
-        include locate_template('/parts/acf/modules/downloads.php');
+        include locate_template('/parts/acf/modules/map.php');
 
         break;
 
-      case 'map':
+
+      /*
+
+      case 'downloads_section':
 
         $anchor = get_sub_field('anchor');
 
