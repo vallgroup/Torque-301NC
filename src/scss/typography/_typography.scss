@@ -10,40 +10,28 @@ body {
   line-height: normal;
   letter-spacing: normal;
   color: $blue-grey;
+}
 
-  .small {
-    font-family: $primary;
-    font-size: 20px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: $blue-grey;
-  }
+%small {
+  font-family: $primary;
+  font-size: 20px;
+  font-weight: normal;
+  color: $blue-grey;
+}
 
-  .tiny {
-    font-family: $primary;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    color: $blue-grey;
-  }
+%tiny {
+  font-family: $primary;
+  font-size: 16px;
+  font-weight: normal;
+  color: $blue-grey;
+}
 
-  .footer {
-    font-family: $primary;
-    font-size: 20px;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: center;
-    color: $greyish-brown;
-  }
+%footer {
+  font-family: $primary;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  color: $greyish-brown;
 }
 
 h1 {
@@ -101,18 +89,6 @@ button {
   background-color: $cloudy-blue;
 
   transition: all 0.25s ease-out;
-
-  .map {
-    font-family: $primary;
-    font-size: 16px;
-    font-weight: bold;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: 1px;
-    text-align: center;
-    color: $white;
-  }
 
   &:hover {
     opacity: 0.8;
