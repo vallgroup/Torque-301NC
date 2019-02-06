@@ -8,6 +8,17 @@ header#header-style-1 {
   background-color: rgba($pale-mauve, 0.85);
 
   .torque-header-content-wrapper {
+    padding: 0;
+
+    .torque-header-logo-wrapper {
+      opacity: 0;
+      transition: all 500 ease-out;
+
+      &.show {
+        opacity: 1;
+      }
+    }
+
     .torque-header-burger-menu-wrapper {
       @include respond-to(desktop) {
         display: none;
@@ -22,7 +33,7 @@ header#header-style-1 {
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      padding-top: 10px;
+      padding-top: 15px;
     }
   }
 
