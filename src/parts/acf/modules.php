@@ -34,17 +34,26 @@ if ( have_rows( $modules ) ):
 
         break;
 
-      /*
       case 'gallery' :
 
         $anchor = get_sub_field('anchor');
-        $image = get_sub_field('image')
+        $image = get_sub_field('image');
 
         include locate_template('/parts/acf/modules/gallery.php');
 
         break;
 
+
+      /*
       case 'downloads_section':
+
+        $anchor = get_sub_field('anchor');
+
+        include locate_template('/parts/acf/modules/downloads.php');
+
+        break;
+
+      case 'map':
 
         $anchor = get_sub_field('anchor');
 
