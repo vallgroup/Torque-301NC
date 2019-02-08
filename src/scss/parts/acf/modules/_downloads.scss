@@ -5,11 +5,15 @@
       right: $border;
       bottom: $border;
     }
-    padding: 100px 65px 30px;
+    padding: 70px 65px 30px;
     width: 66%;
     box-sizing: border-box;
 
     text-align: left;
+
+    h3 {
+      margin: 0;
+    }
   }
 
   .downloads-wrapper {
@@ -23,7 +27,7 @@
         right: $border;
         bottom: $border;
       }
-      padding: 150px 45px 45px;
+      padding: 70px 45px 45px;
       width: 33%;
       box-sizing: border-box;
 
@@ -40,7 +44,8 @@
           right: 0;
           bottom: 0;
           left: 0;
-          background-size: cover;
+          background-size: contain;
+          background-repeat: no-repeat;
           background-position: center;
         }
       }

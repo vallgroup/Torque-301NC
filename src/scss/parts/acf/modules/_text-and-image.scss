@@ -10,12 +10,17 @@
     p {
       margin: 10px 0;
     }
+
+    ul {
+      padding-left: 20px;
+
+      li {
+        list-style: none;
+      }
+    }
   }
 
   .cta-wrapper {
-    button {
-      margin: 0 auto;
-    }
   }
 
   &.top {

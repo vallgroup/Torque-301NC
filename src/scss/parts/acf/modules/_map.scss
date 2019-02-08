@@ -12,10 +12,6 @@
     padding: 100px 50px 50px;
     width: 75%;
     box-sizing: border-box;
-
-    p {
-      @extend %small;
-    }
   }
 
   .map-wrapper {
@@ -50,7 +46,6 @@
           button {
             width: 180px;
 
-            background-color: $charcoal;
             font-family: $primary;
             font-size: 16px;
             font-weight: bold;
@@ -58,6 +53,30 @@
             line-height: normal;
             text-align: center;
             color: $white;
+          }
+
+          &:nth-child(4n) {
+            button {
+              background-color: $brick;
+            }
+          }
+
+          &:nth-child(4n + 1) {
+            button {
+              background-color: $slate;
+            }
+          }
+
+          &:nth-child(4n + 2) {
+            button {
+              background-color: $ocean;
+            }
+          }
+
+          &:nth-child(4n + 3) {
+            button {
+              background-color: $pine;
+            }
           }
 
           &.active {
@@ -68,26 +87,63 @@
               background-color: $white;
               color: $charcoal;
             }
+
+            &:nth-child(4n) {
+              button {
+                border-color: $brick;
+                color: $brick;
+              }
+            }
+
+            &:nth-child(4n + 1) {
+              button {
+                border-color: $slate;
+                color: $slate;
+              }
+            }
+
+            &:nth-child(4n + 2) {
+              button {
+                border-color: $ocean;
+                color: $ocean;
+              }
+            }
+
+            &:nth-child(4n + 3) {
+              button {
+                border-color: $pine;
+                color: $pine;
+              }
+            }
           }
         }
       }
 
       .torque-map-pois-list {
         order: 3;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 400px));
+        justify-content: space-evenly;
+        grid-column-gap: 30px;
+        width: 100%;
 
         .torque-map-pois-list-item {
           @extend %tiny;
           display: flex;
-          width: 50%;
+          margin: 2px 0 5px;
+          border-bottom: 1px solid $smoke;
+          padding: 0 1% 3px;
+          width: 100%;
+          box-sizing: border-box;
 
           .torque-map-pois-list-item-name {
             flex: 2;
+            text-align: left;
           }
 
           .torque-map-pois-list-item-distance {
             flex: 1;
+            text-align: right;
           }
         }
       }

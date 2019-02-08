@@ -1,33 +1,43 @@
 footer {
-  .footer-main {
-    margin-top: 25px;
-    padding: 50px 12vw 130px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 50px;
+
+  .footer-logo {
+    padding: 7vw;
+    width: 30%;
     box-sizing: border-box;
 
-    h2 {
-      margin: 0 0 60px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .footer-contacts-wrapper {
+    border: {
+      left: $border;
+      bottom: $border;
+    }
+    padding: 20px 50px 30px;
+    width: 70%;
+    box-sizing: border-box;
+
+    h3 {
+      margin: 0 0 70px;
     }
 
     .footer-contacts {
       display: flex;
-      justify-content: space-around;
       flex-wrap: wrap;
+      justify-content: space-between;
 
       .footer-contact {
         @extend %footer;
 
-        margin: 0 20px;
+        margin-right: 20px;
 
-        text-align: center;
+        text-align: left;
       }
     }
-  }
-
-  .footer-lower {
-    margin-top: 25px;
-    border: {
-      top: $border;
-    }
-    height: 100px;
   }
 }
