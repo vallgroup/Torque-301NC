@@ -68,7 +68,7 @@ h3 {
   color: $ocean;
 }
 
-button {
+%button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,6 +94,10 @@ button {
   &:hover {
     opacity: 0.8;
   }
+}
+
+button {
+  @extend %button;
 }
 
 a {

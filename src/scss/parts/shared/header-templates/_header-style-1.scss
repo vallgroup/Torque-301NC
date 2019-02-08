@@ -10,6 +10,7 @@ header#header-style-1 {
   .torque-header-content-wrapper {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     padding: 0;
 
     .torque-header-logo-wrapper {
@@ -41,7 +42,25 @@ header#header-style-1 {
         align-items: center;
 
         .torque-menu-item-wrapper {
-          margin: 0 15px;
+          margin: 2px 15px;
+        }
+      }
+
+      &.primary {
+        flex-grow: 1;
+      }
+
+      &.pinned {
+        .torque-menu-item-wrapper {
+          .torque-menu-item {
+            @extend %button;
+
+            padding: 7px 12px;
+            box-sizing: border-box;
+
+            background-color: $ocean;
+            color: $white;
+          }
         }
       }
     }
@@ -63,5 +82,6 @@ header#header-style-1 {
     letter-spacing: normal;
     color: $charcoal;
     text-transform: uppercase;
+    user-select: none;
   }
 }

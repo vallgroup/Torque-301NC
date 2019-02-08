@@ -10,7 +10,8 @@ class NC_Nav_Menus {
   }
 
   public function modify_parent_nav_menus( $nav_menus ) {
-    // do something to nav menus
+    $nav_menus['pinned'] = 'Pinned Menu';
+
     return $nav_menus;
   }
 
