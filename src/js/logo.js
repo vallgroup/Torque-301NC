@@ -10,7 +10,10 @@
       return;
     }
 
-    $(window).scroll(() => {
+    updateState();
+    $(window).scroll(updateState);
+
+    function updateState() {
       const currentOffset =
         trackLogo.offset().top + trackLogo.height() - $(window).scrollTop();
 
@@ -23,7 +26,7 @@
       }
 
       prevOffset = currentOffset;
-    });
+    }
 
     function showHeaderLogo(show) {
       const headerLogo = $(".torque-header-logo-wrapper");
