@@ -1,8 +1,9 @@
 <?php
 
-require_once( get_stylesheet_directory() . '/includes/301nc-nav-menus-class.php');
-require_once( get_stylesheet_directory() . '/includes/widgets/301nc-widgets-class.php');
-require_once( get_stylesheet_directory() . '/includes/acf/301nc-acf-class.php');
+require_once( get_stylesheet_directory() . '/includes/nc-nav-menus-class.php');
+require_once( get_stylesheet_directory() . '/includes/widgets/nc-widgets-class.php');
+require_once( get_stylesheet_directory() . '/includes/customizer/nc-customizer-class.php');
+require_once( get_stylesheet_directory() . '/includes/acf/nc-acf-class.php');
 
 /**
  * Child Theme Nav Menus
@@ -18,6 +19,14 @@ require_once( get_stylesheet_directory() . '/includes/acf/301nc-acf-class.php');
 
 if ( class_exists( 'NC_Widgets' ) ) {
   new NC_Widgets();
+}
+
+/**
+ * Child Theme Customizer
+ */
+
+if ( class_exists( 'NC_Customizer' ) ) {
+  new NC_Customizer();
 }
 
 /**

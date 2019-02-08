@@ -1,6 +1,6 @@
 <footer>
   <div class="footer-logo" >
-    <?php get_template_part( 'parts/shared/logo', 'dark'); ?>
+    <?php get_template_part( 'parts/shared/logo', 'footer'); ?>
   </div>
 
   <div class="footer-contacts-wrapper" >
