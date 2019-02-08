@@ -5,7 +5,7 @@ header#header-style-1 {
   width: 100%;
   box-sizing: border-box;
 
-  background-color: rgba($pale-mauve, 0.85);
+  background-color: $light-blue-grey;
 
   .torque-header-content-wrapper {
     display: flex;
@@ -14,7 +14,7 @@ header#header-style-1 {
 
     .torque-header-logo-wrapper {
       opacity: 0;
-      transition: all 500 ease-out;
+      transition: all 0.5s ease-out;
 
       &.show {
         opacity: 1;
@@ -61,7 +61,7 @@ header#header-style-1 {
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
-    color: $greyish-brown;
+    color: $charcoal;
     text-transform: uppercase;
   }
 }

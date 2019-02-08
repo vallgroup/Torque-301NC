@@ -50,7 +50,7 @@
           button {
             width: 180px;
 
-            background-color: $greyish-brown;
+            background-color: $charcoal;
             font-family: $primary;
             font-size: 16px;
             font-weight: bold;
@@ -62,11 +62,11 @@
 
           &.active {
             button {
-              border: 2px solid $greyish-brown;
+              border: 2px solid $charcoal;
               padding-top: 13px;
               padding-bottom: 13px;
               background-color: $white;
-              color: $greyish-brown;
+              color: $charcoal;
             }
           }
         }

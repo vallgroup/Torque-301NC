@@ -9,21 +9,21 @@ body {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: $blue-grey;
+  color: $smoke;
 }
 
 %small {
   font-family: $primary;
   font-size: 20px;
   font-weight: normal;
-  color: $blue-grey;
+  color: $smoke;
 }
 
 %tiny {
   font-family: $primary;
   font-size: 16px;
   font-weight: normal;
-  color: $blue-grey;
+  color: $smoke;
 }
 
 %footer {
@@ -31,7 +31,7 @@ body {
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
-  color: $greyish-brown;
+  color: $charcoal;
 }
 
 h1 {
@@ -42,7 +42,7 @@ h1 {
   font-stretch: normal;
   line-height: 1.03;
   letter-spacing: normal;
-  color: $greyish-brown;
+  color: $charcoal;
 }
 
 h2 {
@@ -54,7 +54,7 @@ h2 {
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: $greyish-brown;
+  color: $charcoal;
 }
 
 h3 {
@@ -65,7 +65,7 @@ h3 {
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  color: $greyish-brown;
+  color: $charcoal;
 }
 
 button {
@@ -86,7 +86,8 @@ button {
   letter-spacing: normal;
   text-transform: uppercase;
 
-  background-color: $cloudy-blue;
+  color: $white;
+  background-color: $pine;
 
   transition: all 0.25s ease-out;
 
