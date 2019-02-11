@@ -1,27 +1,36 @@
 .map-section {
-  border: {
-    bottom: $border;
+  @include respond-to(desktop) {
+    border: {
+      bottom: $border;
+    }
   }
 
   .description {
-    margin-left: 25%;
-    border: {
-      bottom: $border;
-      left: $border;
-    }
-    padding: 100px 50px 50px;
-    width: 75%;
+    padding: 30px $bodyPadding 50px;
     box-sizing: border-box;
+
+    @include respond-to(desktop) {
+      margin-left: 25%;
+      border: {
+        bottom: $border;
+        left: $border;
+      }
+      padding: 100px 50px 50px;
+      width: 75%;
+    }
   }
 
   .map-wrapper {
-    margin-right: 15%;
-    border: {
-      right: $border;
-    }
-    padding: 30px;
-    width: 85%;
     box-sizing: border-box;
+
+    @include respond-to(desktop) {
+      margin-right: 15%;
+      border: {
+        right: $border;
+      }
+      padding: 30px;
+      width: 85%;
+    }
 
     .torque-map {
       display: flex;
@@ -37,14 +46,22 @@
         order: 2;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
         margin-bottom: 50px;
+        padding: 0 $bodyPadding;
+
+        @include respond-to(desktop) {
+          justify-content: center;
+          padding: 0;
+        }
 
         .torque-map-poi {
-          margin: 10px;
+          margin: 5px;
 
           button {
-            width: 180px;
+            border: 2px solid transparent;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            width: auto;
 
             font-family: $primary;
             font-size: 16px;
@@ -53,6 +70,11 @@
             line-height: normal;
             text-align: center;
             color: $white;
+
+            @include respond-to(desktop) {
+              margin: 10px;
+              width: 190px;
+            }
           }
 
           &:nth-child(4n) {
@@ -82,8 +104,6 @@
           &.active {
             button {
               border: 2px solid $charcoal;
-              padding-top: 13px;
-              padding-bottom: 13px;
               background-color: $white;
               color: $charcoal;
             }
@@ -122,10 +142,16 @@
       .torque-map-pois-list {
         order: 3;
         display: grid;
-        grid-template-columns: repeat(2, minmax(200px, 400px));
+        grid-template-columns: minmax(auto, 400px);
         justify-content: space-evenly;
         grid-column-gap: 30px;
+        padding: 0 $bodyPadding;
         width: 100%;
+        box-sizing: border-box;
+
+        @include respond-to(desktop) {
+          grid-template-columns: repeat(2, minmax(200px, 400px));
+        }
 
         .torque-map-pois-list-item {
           @extend %tiny;
