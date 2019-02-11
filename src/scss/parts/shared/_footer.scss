@@ -1,29 +1,58 @@
 footer {
   display: flex;
   align-items: flex-start;
+  flex-direction: column-reverse;
   margin-bottom: 50px;
+  padding: 0 $bodyPadding;
+  box-sizing: border-box;
+
+  @include respond-to(desktop) {
+    flex-direction: row;
+    padding: 0;
+  }
 
   .footer-logo {
-    padding: 7vw;
-    width: 30%;
+    padding: 35px 0px 0px 25px;
+    width: 50%;
     box-sizing: border-box;
+
+    text-align: center;
+
+    @include respond-to(desktop) {
+      padding: 7vw;
+      width: 30%;
+    }
 
     img {
       width: 100%;
+      max-width: 250px;
     }
   }
 
   .footer-contacts-wrapper {
     border: {
+      right: $border;
       left: $border;
       bottom: $border;
     }
-    padding: 20px 50px 30px;
-    width: 70%;
+    padding: 45px 25px;
+    width: 100%;
     box-sizing: border-box;
 
+    @include respond-to(desktop) {
+      border: {
+        right: 0;
+      }
+      padding: 20px 50px 30px;
+      width: 70%;
+    }
+
     h3 {
-      margin: 0 0 70px;
+      margin: 0 0 45px;
+
+      @include respond-to(desktop) {
+        margin: 0 0 70px;
+      }
     }
 
     .footer-contacts {
@@ -34,9 +63,14 @@ footer {
       .footer-contact {
         @extend %footer;
 
-        margin-right: 20px;
+        width: 100%;
 
         text-align: left;
+
+        @include respond-to(desktop) {
+          width: auto;
+          margin-right: 20px;
+        }
       }
     }
   }
