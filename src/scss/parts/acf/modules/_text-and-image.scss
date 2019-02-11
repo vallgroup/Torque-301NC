@@ -24,32 +24,70 @@
   }
 
   &.top {
-    margin-left: 10%;
+    @include respond-to(desktop) {
+      margin-left: 10%;
+    }
 
     .content-wrapper {
       display: flex;
       align-items: flex-end;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      padding: 0 25px 45px;
+      max-width: 630px;
+      box-sizing: border-box;
+
+      @include respond-to(tablet) {
+        margin-bottom: 60px;
+        border: {
+          right: $border;
+          bottom: $border;
+          left: $border;
+        }
+        padding: 30px 60px 45px;
+      }
+
+      @include respond-to(desktop) {
+        flex-wrap: nowrap;
+        margin-bottom: 0px;
+        border: {
+          right: none;
+        }
+        padding: 0;
+        max-width: none;
+      }
 
       .content {
-        flex-basis: 100%;
-        border: $border;
-        border-top: none;
-        padding: 100px 50px 40px;
+        width: 100%;
+        box-sizing: border-box;
+
+        @include respond-to(desktop) {
+          border: {
+            right: $border;
+          }
+          padding: 100px 50px 40px;
+        }
       }
 
       .cta-wrapper {
-        flex-basis: 33%;
-        border-bottom: $border;
-        padding: 40px;
+        width: 100%;
+        padding-top: 30px;
+
+        @include respond-to(desktop) {
+          padding: 40px;
+          width: 33%;
+        }
       }
     }
 
     .image-wrapper {
-      border: {
-        left: $border;
-        bottom: $border;
+      @include respond-to(desktop) {
+        border: {
+          left: $border;
+          bottom: $border;
+        }
+        padding: 20px;
       }
-      padding: 20px;
     }
   }
 
@@ -57,63 +95,157 @@
   &.left {
     display: flex;
     align-items: flex-end;
+    flex-direction: column;
+    margin-top: 30px;
+    border: {
+      top: $border;
+      bottom: $border;
+    }
+    padding: {
+      top: 7.5px;
+    }
+
+    @include respond-to(tablet) {
+      padding: {
+        top: 15px;
+      }
+    }
+
+    @include respond-to(desktop) {
+      flex-direction: row;
+      margin-top: 0px;
+      border: {
+        top: 0;
+        bottom: $border;
+      }
+    }
 
     .image-wrapper {
-      flex-basis: 66%;
-      padding: 150px 30px 30px;
+      order: 1;
+      width: 100%;
+
+      @include respond-to(desktop) {
+        width: 66%;
+        padding: 150px 30px 30px;
+      }
     }
 
     .content-wrapper {
-      flex-basis: 33%;
+      order: 2;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 0 25px 25px;
+
+      @include respond-to(tablet) {
+        padding: 20px 70px 50px;
+      }
+
+      @include respond-to(desktop) {
+        padding: 0;
+        width: 33%;
+      }
 
       .content {
-        padding: 60px 50px;
+        padding: 0;
+
+        @include respond-to(desktop) {
+          padding: 60px 50px;
+        }
       }
 
       .cta-wrapper {
-        border: {
-          top: $border;
-        }
-        padding: 50px;
+        padding-top: 25px;
         text-align: center;
+
+        @include respond-to(desktop) {
+          border: {
+            top: $border;
+          }
+          padding: 50px;
+        }
       }
     }
   }
 
   &.left {
-    .image-wrapper {
+    margin-left: 9%;
+    border: {
+      left: $border;
+    }
+    padding: {
+      left: 7.5px;
+    }
+
+    @include respond-to(tablet) {
+      padding: {
+        left: 15px;
+      }
+    }
+
+    @include respond-to(desktop) {
+      flex-direction: row-reverse;
+      margin-left: 0;
       border: {
-        left: $border;
-        bottom: $border;
+        left: 0;
+      }
+      padding: 0;
+    }
+
+    .image-wrapper {
+      @include respond-to(desktop) {
+        border: {
+          left: $border;
+        }
       }
     }
 
     .content-wrapper {
-      margin-right: -$borderWidth; //overlapping borders
-
-      border: {
-        right: $border;
-        bottom: $border;
+      @include respond-to(desktop) {
+        margin-right: -$borderWidth; //overlapping borders
+        border: {
+          right: $border;
+        }
       }
     }
   }
 
   &.right {
-    flex-direction: row-reverse;
+    margin-right: 9%;
+    border: {
+      right: $border;
+    }
+    padding: {
+      right: 7.5px;
+    }
+
+    @include respond-to(tablet) {
+      padding: {
+        right: 15px;
+      }
+    }
+
+    @include respond-to(desktop) {
+      margin-right: 0;
+      border: {
+        right: 0;
+      }
+      padding: 0;
+    }
 
     .image-wrapper {
-      border: {
-        right: $border;
-        bottom: $border;
+      @include respond-to(desktop) {
+        border: {
+          right: $border;
+        }
       }
     }
 
     .content-wrapper {
-      margin-left: -$borderWidth; //overlapping borders
-
-      border: {
-        left: $border;
-        bottom: $border;
+      @include respond-to(desktop) {
+        margin-left: -$borderWidth; //overlapping borders
+        border: {
+          left: $border;
+        }
       }
     }
   }
