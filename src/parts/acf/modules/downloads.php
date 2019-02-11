@@ -14,7 +14,7 @@ if ( have_rows( $downloads ) ):
       <h3>DOWNLOADS</h3>
     </div>
 
-    <div class="downloads-wrapper" >
+    <div class="row downloads-wrapper" >
 
   <?php
 

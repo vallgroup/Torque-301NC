@@ -1,8 +1,18 @@
 .images-wrapper {
   img {
     display: block;
-    padding-top: 70px;
+    padding-top: 20px;
     width: 100%;
     height: auto;
+    min-height: 150px;
+    object-fit: cover;
+
+    @include respond-to(tablet) {
+      padding-top: 40px;
+    }
+
+    @include respond-to(desktop) {
+      padding-top: 70px;
+    }
   }
 }

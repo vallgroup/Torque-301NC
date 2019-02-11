@@ -1,18 +1,39 @@
 .downloads-section {
-  .header-wrapper {
-    margin-right: 33%;
-    border: {
-      right: $border;
-      bottom: $border;
-    }
-    padding: 70px 65px 30px;
-    width: 66%;
-    box-sizing: border-box;
+  padding: 35px $bodyPadding;
+  max-width: 700px;
+  box-sizing: border-box;
 
+  @include respond-to(tablet) {
+    margin-top: 30px;
+    border: $border;
+    padding: 70px 130px;
+  }
+
+  @include respond-to(desktop) {
+    margin-top: 0px;
+    border: 0;
+    padding: 0;
+    max-width: unset;
+  }
+
+  .header-wrapper {
+    box-sizing: border-box;
     text-align: left;
 
+    @include respond-to(desktop) {
+      margin-right: 33%;
+      border: {
+        right: $border;
+        bottom: $border;
+      }
+      padding: 70px 65px 30px;
+      width: 66%;
+    }
+
     h3 {
-      margin: 0;
+      @include respond-to(desktop) {
+        margin: 0;
+      }
     }
   }
 
@@ -21,15 +42,28 @@
     flex-wrap: wrap;
 
     .download {
-      margin-top: -$borderWidth;
-      border: {
-        top: $border;
-        right: $border;
-        bottom: $border;
-      }
-      padding: 70px 45px 45px;
-      width: 33%;
+      width: 100%;
       box-sizing: border-box;
+
+      &:not(:last-child) {
+        margin-bottom: 60px;
+      }
+
+      @include respond-to(desktop) {
+        margin-top: -$borderWidth;
+        margin-bottom: 0px;
+        border: {
+          top: $border;
+          right: $border;
+          bottom: $border;
+        }
+        padding: 70px 45px 45px;
+        width: 33%;
+
+        &:not(:last-child) {
+          margin-bottom: 0px;
+        }
+      }
 
       .image-wrapper {
         position: relative;
@@ -46,12 +80,18 @@
           left: 0;
           background-size: contain;
           background-repeat: no-repeat;
-          background-position: center;
+          background-position: left;
+
+          @include respond-to(desktop) {
+            background-position: center;
+          }
         }
       }
 
       button {
-        margin: 0 auto;
+        @include respond-to(desktop) {
+          margin: 0 auto;
+        }
       }
     }
   }
