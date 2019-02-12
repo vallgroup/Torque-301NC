@@ -4,6 +4,7 @@
   max-height: 400px;
 
   background-size: cover;
+  background-position: center;
   text-align: left;
 
   @include respond-to(tablet) {
@@ -20,6 +21,10 @@
 
     img {
       max-width: 100%;
+    }
+
+    @include respond-to-max(tablet) {
+      display: none;
     }
   }
 }

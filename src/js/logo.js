@@ -3,7 +3,7 @@
 
   $(document).ready(() => {
     const trackLogo = $("#track-logo");
-    let prevOffset = 1;
+    let prevState = false;
 
     if (!trackLogo.length) {
       showHeaderLogo(true);
@@ -12,23 +12,25 @@
 
     updateState();
     $(window).scroll(updateState);
+    $(window).resize(updateState);
 
     function updateState() {
       const currentOffset =
         trackLogo.offset().top + trackLogo.height() - $(window).scrollTop();
+      const currentWidth = $(window).width();
 
-      if (prevOffset > 0 && currentOffset <= 0) {
+      if (currentOffset < 0 || currentWidth <= 767) {
         showHeaderLogo(true);
       }
 
-      if (prevOffset <= 0 && currentOffset > 0) {
+      if (currentOffset > 0 && currentWidth > 767) {
         showHeaderLogo(false);
       }
-
-      prevOffset = currentOffset;
     }
 
     function showHeaderLogo(show) {
+      if (show === prevState) return;
+
       const headerLogo = $(".torque-header-logo-wrapper");
 
       if (!headerLogo) {
@@ -38,6 +40,8 @@
       show
         ? headerLogo.addClass(TOGGLE_CLASS)
         : headerLogo.removeClass(TOGGLE_CLASS);
+
+      prevState = show;
     }
   });
 })(jQuery);
