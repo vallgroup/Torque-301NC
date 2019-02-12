@@ -13,7 +13,10 @@ if ( have_rows( $modules ) ):
         $anchor = get_sub_field('anchor');
         $align = get_sub_field( 'align' );
         $content = get_sub_field( 'content' );
+
+        $image_or_slideshow = get_sub_field('image_or_slideshow');
         $image = get_sub_field( 'image' );
+        $slideshow = get_sub_field('slideshow');
 
         $cta_type = get_sub_field( 'call_to_action_type' );
         $cta = false;

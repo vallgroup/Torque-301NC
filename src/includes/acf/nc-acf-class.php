@@ -9,7 +9,7 @@ class NC_ACF {
     add_action('acf/init', array( $this, 'acf_init' ) );
 
     // hide acf in admin - client doesnt need to see this
-    add_filter('acf/settings/show_admin', '__return_false');
+    //add_filter('acf/settings/show_admin', '__return_false');
 
     // add acf fields to wp search
     if ( class_exists( 'Torque_ACF_Search' ) ) {
@@ -120,13 +120,45 @@ class NC_ACF {
       							'delay' => 1,
       						),
       						array(
+      							'key' => 'field_5c62fb7a20d99',
+      							'label' => 'Image or Slideshow',
+      							'name' => 'image_or_slideshow',
+      							'type' => 'radio',
+      							'instructions' => '',
+      							'required' => 0,
+      							'conditional_logic' => 0,
+      							'wrapper' => array(
+      								'width' => '',
+      								'class' => '',
+      								'id' => '',
+      							),
+      							'choices' => array(
+      								'image' => 'Image',
+      								'slideshow' => 'Slideshow',
+      							),
+      							'allow_null' => 0,
+      							'other_choice' => 0,
+      							'default_value' => 'image',
+      							'layout' => 'horizontal',
+      							'return_format' => 'value',
+      							'save_other_choice' => 0,
+      						),
+      						array(
       							'key' => 'field_5c5b0bbd6a809',
       							'label' => 'Image',
       							'name' => 'image',
       							'type' => 'image',
       							'instructions' => '',
       							'required' => 1,
-      							'conditional_logic' => 0,
+      							'conditional_logic' => array(
+      								array(
+      									array(
+      										'field' => 'field_5c62fb7a20d99',
+      										'operator' => '==',
+      										'value' => 'image',
+      									),
+      								),
+      							),
       							'wrapper' => array(
       								'width' => '',
       								'class' => '',
@@ -142,6 +174,33 @@ class NC_ACF {
       							'max_height' => '',
       							'max_size' => '',
       							'mime_types' => '',
+      						),
+      						array(
+      							'key' => 'field_5c62faf820d98',
+      							'label' => 'Slideshow Shortcode',
+      							'name' => 'slideshow',
+      							'type' => 'text',
+      							'instructions' => 'Create a slideshow from the \'Slideshows\' section in the admin sidebar, then paste the given shortcode here. eg [torque_slideshow id="108"]',
+      							'required' => 1,
+      							'conditional_logic' => array(
+      								array(
+      									array(
+      										'field' => 'field_5c62fb7a20d99',
+      										'operator' => '==',
+      										'value' => 'slideshow',
+      									),
+      								),
+      							),
+      							'wrapper' => array(
+      								'width' => '',
+      								'class' => '',
+      								'id' => '',
+      							),
+      							'default_value' => '',
+      							'placeholder' => '',
+      							'prepend' => '',
+      							'append' => '',
+      							'maxlength' => '',
       						),
       						array(
       							'key' => 'field_5c5b0ef508d85',
