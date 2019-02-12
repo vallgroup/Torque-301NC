@@ -52,6 +52,10 @@ if ( have_rows( $modules ) ):
         $description = get_sub_field('description');
         $map_shortcode = get_sub_field('map_shortcode');
 
+        $image_or_slideshow = get_sub_field('image_or_slideshow');
+        $image = get_sub_field( 'image' );
+        $slideshow = get_sub_field('slideshow_shortcode');
+
         include locate_template('/parts/acf/modules/map.php');
 
         break;

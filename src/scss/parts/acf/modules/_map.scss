@@ -1,26 +1,70 @@
 .map-section {
+  display: flex;
+  flex-direction: column;
+
   @include respond-to(desktop) {
+    display: block;
+
     border: {
       bottom: $border;
     }
   }
 
-  .description {
-    padding: 30px $bodyPadding 50px;
-    box-sizing: border-box;
+  .image-wrapper {
+    order: 1;
+    margin-top: 40px;
+
+    & > img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
 
     @include respond-to(desktop) {
-      margin-left: 25%;
+      margin: 0;
+      margin-right: 15%;
       border: {
+        right: $border;
+        bottom: $border;
+      }
+      padding: 30px;
+      width: 85%;
+      box-sizing: border-box;
+    }
+  }
+
+  .description {
+    order: 2;
+    margin: 0 auto;
+    padding: 30px $bodyPadding 50px;
+    max-width: 630px;
+    box-sizing: border-box;
+
+    @include respond-to(tablet) {
+      margin-top: -2px;
+      margin-bottom: 70px;
+      border: {
+        top: $border;
+        right: $border;
         bottom: $border;
         left: $border;
       }
+    }
+
+    @include respond-to(desktop) {
+      margin: 0;
+      margin-left: 25%;
+      border: {
+        right: none;
+      }
       padding: 100px 50px 50px;
       width: 75%;
+      max-width: none;
     }
   }
 
   .map-wrapper {
+    order: 3;
     box-sizing: border-box;
 
     @include respond-to(desktop) {
