@@ -121,7 +121,7 @@ class NC_ACF {
       						),
       						array(
       							'key' => 'field_5c62fb7a20d99',
-      							'label' => 'Image or Slideshow',
+      							'label' => 'Image, Video or Slideshow',
       							'name' => 'image_or_slideshow',
       							'type' => 'radio',
       							'instructions' => '',
@@ -134,6 +134,7 @@ class NC_ACF {
       							),
       							'choices' => array(
       								'image' => 'Image',
+      								'video' => 'Video',
       								'slideshow' => 'Slideshow',
       							),
       							'allow_null' => 0,
@@ -175,6 +176,68 @@ class NC_ACF {
       							'max_size' => '',
       							'mime_types' => '',
       						),
+      						array(
+      							'key' => 'field_5c634d2fakc82dn',
+      							'label' => 'Video URL',
+      							'name' => 'video_url',
+      							'type' => 'text',
+								'instructions' => 'Paste the video URL here, without the embed tags. Just the URL.',
+      							'required' => 1,
+      							'conditional_logic' => array(
+      								array(
+      									array(
+      										'field' => 'field_5c62fb7a20d99',
+      										'operator' => '==',
+      										'value' => 'video',
+      									),
+      								),
+      							),
+      							'wrapper' => array(
+      								'width' => '',
+      								'class' => '',
+      								'id' => '',
+      							),
+      							'default_value' => '',
+      							'placeholder' => '',
+      							'prepend' => '',
+      							'append' => '',
+      							'maxlength' => '',
+      						),
+							  array(
+								  'key' => 'field_5d7a96cbcdc79',
+								  'label' => 'Video Autoplay?',
+								  'name' => 'video_autoplay',
+								  'type' => 'select',
+								  'instructions' => 'Would you like to attempt to autoplay the Featured Video on the Products page? Note: some browser block this feature.',
+								  'required' => 1,
+								'conditional_logic' => array(
+									array(
+										array(
+											'field' => 'field_5c62fb7a20d99',
+											'operator' => '==',
+											'value' => 'video',
+										),
+									),
+								),
+								  'wrapper' => array(
+									  'width' => '',
+									  'class' => '',
+									  'id' => '',
+								  ),
+								  'choices' => array(
+									  'No' => 'No',
+									  'Yes' => 'Yes',
+								  ),
+								  'default_value' => array(
+									  0 => 'No',
+								  ),
+								  'allow_null' => 0,
+								  'multiple' => 0,
+								  'ui' => 0,
+								  'return_format' => 'value',
+								  'ajax' => 0,
+								  'placeholder' => '',
+							  ),
       						array(
       							'key' => 'field_5c62faf820d98',
       							'label' => 'Slideshow Shortcode',
@@ -695,5 +758,3 @@ class NC_ACF {
       endif;
   }
 }
-
-?>
